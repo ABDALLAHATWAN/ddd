@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="css/Normalize.css">
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pVQYz5Y2VzWk6U3kSJRZv1lK/0WJ7POss8gIbjVxhyk+Gl1JjlgLufy1MqV+jhYbVhI8nX+GZpA5L4jy9A1uZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Additional styles for Purchase page */
+        .cart-container {
+            padding: 20px;
+        }
+        .cart-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+        .cart-item img {
+            width: 100px;
+            border-radius: 10px;
+        }
+        .item-details {
+            flex: 1;
+            margin-left: 20px;
+        }
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .quantity-controls button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2em;
+            color: #007bff;
+        }
+        .quantity-controls span {
+            font-size: 1.2em;
+        }
+        .total {
+            text-align: right;
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+        .empty-cart {
+            text-align: center;
+            font-size: 1.5em;
+            color: #666;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="#"><img src="./imgs/logo.png" alt="Logo" class="logo"/></a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Purchase.html">Purchase</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <a href="Purchase.html"><i class="fas fa-shopping-cart"></i></a>
+        </header>
+        <div class="cart-container">
+            <h1>Shopping Cart</h1>
+            <div id="cart-items"></div>
+            <div class="total" id="total">Total: $0</div>
+        </div>
+    </div>
+    <script src="purchase.js"></script>
+</body>
+</html>
